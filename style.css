@@ -1,11 +1,98 @@
+* {
+    box-sizing: border-box;
+    --background-mobile: rgb(6, 6, 68);
+    --background-desktop: rgb(30, 0, 60);
+}
+
 body {
-    background-color: gainsboro;
+    background-color: var(--background-desktop);
+    font-family: Arial;
+    height: 100vh;
+    font-size: 24px;
+    color: white;
+}
+
+header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: var(--background-desktop);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu ul {
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    margin: auto;
+    font-size: 2em;
+}
+
+a {
+    display: block;
+    margin: auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5em;
+    color: teal;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+a p {
+    padding-top: .5em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-subtitle {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    align-items: center;
+    font-size: 1.5em;
+    position: fixed;
+    top: 10vh;
+    font-family: 'Comfortaa', cursive;
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
-    width: 400px;
-    gap: .125em;
+    height: auto;
+    width: 100vw;
+    justify-content: center;
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    gap: .25em;
+}
+
+@media (max-width: 1200px) {
+    body {
+        background-color: var(--background-mobile);
+    }
+    .menu {
+        background-color: var(--background-mobile);
+    }
+    .menu a {
+        font-size: 1em;
+    }
 }
