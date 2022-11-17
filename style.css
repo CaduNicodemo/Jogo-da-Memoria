@@ -1,0 +1,11 @@
+body {
+    background-color: gainsboro;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+    gap: .125em;
+}
